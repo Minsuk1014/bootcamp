@@ -16,7 +16,6 @@ logging.basicConfig(filename="./logs/" + file_name,  level=logging.INFO, # INFO 
 
 
 st.title("공시정보 보여주기")
-
 st.header("공시정보 조회")
 
 col1, col2, col3 = st.columns(3)

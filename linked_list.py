@@ -15,21 +15,18 @@ col1,col2,col3 = st.sidebar.columns(3) # 비율 지정
 def append_data_callback():
     if st.session_state.data_input_val:     # 변수처럼 사용되지만, 딕셔너리 저장공간.
         st.session_state.linked.append(st.session_state.data_input_val)
-        st.session_state.data_input_val=''
     else:
         st.sidebar.warning("추가할 데이터를 입력")
 
 def delete_data_callback():
     if st.session_state.data_input_val:     # 변수처럼 사용되지만, 딕셔너리 저장공간.
         st.session_state.linked.delete(st.session_state.data_input_val)
-        st.session_state.data_input_val=''
     else:
         st.sidebar.warning("추가할 데이터를 입력")
 
 def prepend_data_callback():
     if st.session_state.data_input_val:     # 변수처럼 사용되지만, 딕셔너리 저장공간.
         st.session_state.linked.prepend(st.session_state.data_input_val)
-        st.session_state.data_input_val=''
     else:
         st.sidebar.warning("추가할 데이터를 입력")
 
@@ -55,5 +52,3 @@ list_display = st.empty() # empty? -> 공간 먼저 만들고, 나중에 거기�
 result = st.session_state.linked.display()
 
 list_display.markdown(f"{result}") # 아래에 새로 업데이트해도 위치는 변하지 않음.
-
-set(1)

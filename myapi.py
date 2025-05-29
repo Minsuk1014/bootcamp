@@ -7,5 +7,5 @@ from fastapi import FastAPI
 app = FastAPI()
 
 @app.get("/encore/")
-def myfunc():
+async def myfunc(): # async 비동기 / 
     return {"massage" : "ㅋㅋㅋㅋ"}
